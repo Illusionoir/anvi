@@ -1,87 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Service – Anvi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anvi – Terms of Service</title>
 
-<style>
-:root {
-  --bg:#0e0f1a; --card:#16182b; --text:#e4e6eb;
-  --muted:#b5bac1; --accent:#5865F2;
-}
-
-body {
-  margin:0;
-  font-family:system-ui;
-  background:radial-gradient(circle at top,#1b1f3b,var(--bg));
-  color:var(--text);
-}
-
-nav {
-  background:#16182b;
-  padding:1rem 2rem;
-  display:flex;
-  justify-content:space-between;
-  border-bottom:1px solid #2a2d55;
-}
-
-nav a {
-  color:var(--text);
-  text-decoration:none;
-  margin-left:1.5rem;
-}
-
-nav a:hover { color:var(--accent); }
-
-.container {
-  max-width:900px;
-  margin:3rem auto;
-  padding:2.5rem;
-  background:var(--card);
-  border-radius:16px;
-}
-
-h1 { color:var(--accent); }
-h2 { margin-top:2rem; }
-p,li { color:var(--muted); }
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<nav>
-  <strong>Anvi</strong>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="tos.html">ToS</a>
-  </div>
-</nav>
+<body class="inner">
 
-<div class="container">
-<h1>Terms of Service</h1>
-<p>Last updated: January 2026</p>
+    <!-- NAVBAR WITH AVATAR -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-avatar" title="Back to Home">
+            <img src="https://cdn.discordapp.com/avatars/1218813969716875345/a4402857304efa6b539b4fd47cb5e4c6.png?size=64"
+                alt="Anvi Avatar">
+        </a>
 
-<h2>Usage</h2>
-<ul>
-  <li>Users must follow Discord’s Terms of Service</li>
-  <li>Abuse or misuse may result in restriction</li>
-</ul>
+        <div class="nav-right">
+            <a href="privacy.html">Privacy</a>
+            <a href="tos.html">ToS</a>
+        </div>
+    </nav>
 
-<h2>Availability</h2>
-<p>The bot is provided as-is with no uptime guarantee.</p>
+    <!-- CONTENT -->
+    <main class="container">
+        <h1>Terms of Service</h1>
 
-<h2>Changes</h2>
-<p>Terms may be updated at any time.</p>
+        <p>
+            By using Anvi, you agree to the following terms.
+        </p>
 
-<h2>Contact</h2>
-<p>
-  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" width="16">
-  <a href="https://discord.com/users/1082009804874199150" target="_blank">
-    Illusion
-  </a>
-</p>
-</div>
+        <div class="info-sections">
+
+            <section>
+                <h2>⚙️ Usage</h2>
+                <p>
+                    You may use Anvi in compliance with
+                    <a href="https://discord.com/terms" target="_blank" rel="noopener">
+                        Discord’s Terms of Service
+                    </a>
+                    and
+                    <a href="https://discord.com/guidelines" target="_blank" rel="noopener">
+                        Community Guidelines
+                    </a>.
+                </p>
+
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>🚫 Abuse</h2>
+                <p>
+                    Abuse, exploitation, or misuse of the bot may result
+                    in restricted access or permanent denial of service.
+                </p>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>⌛ Availability</h2>
+                <p>
+                    Anvi is provided <strong>as-is</strong> with no guarantee of continuous availability or uptime.
+                    Downtime may occur due to maintenance, updates, or technical issues.
+                </p>
+            </section>
+
+            <section>
+                <h2>📌 Changes</h2>
+                <p>
+                    Terms may be updated at any time without prior notice.
+                    Continued use of the bot implies acceptance of changes.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Anvi Bot • Terms of Service
+    </footer>
 
 </body>
+
 </html>
