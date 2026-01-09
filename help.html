@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anvi – Help & Commands</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="inner">
+
+    <!-- NAVBAR WITH AVATAR -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-avatar" title="Back to Home">
+            <img src="https://cdn.discordapp.com/avatars/1218813969716875345/a4402857304efa6b539b4fd47cb5e4c6.png?size=64"
+                alt="Anvi Avatar">
+        </a>
+
+        <div class="nav-right">
+            <a href="privacy.html">Privacy</a>
+            <a href="tos.html">ToS</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Help & Commands</h1>
+        <p>
+            Below is a categorized list of Anvi’s commands.
+            Both <strong>slash</strong> (<code>/</code>) and <strong>prefix</strong> (<code>,</code>) commands are
+            supported.
+        </p>
+
+        <div class="command-search">
+            <input type="text" id="commandSearch" placeholder="Search commands (e.g. level, balance, hug)…"
+                autocomplete="off">
+        </div>
+
+
+        <div class="info-sections">
+
+            <!-- ================= Utility ================= -->
+            <details class="command-group">
+                <summary>🧰 Utility</summary>
+                <ul class="command-list">
+                    <li>
+                        <code>/help</code>
+                        <span>Show the interactive help menu</span>
+                        <small>Example: <code>/help</code></small>
+                    </li>
+                    <li>
+                        <code>/ping</code>
+                        <span>Check bot latency</span>
+                        <small>Example: <code>/ping</code></small>
+                    </li>
+                    <li>
+                        <code>/info</code>
+                        <span>View bot information</span>
+                        <small>Example: <code>/info</code></small>
+                    </li>
+                    <li>
+                        <code>/level</code>
+                        <span>Show your rank card</span>
+                        <small>Example: <code>/level</code></small>
+                    </li>
+                    <li>
+                        <code>/leaderboard</code>
+                        <span>Top users by level</span>
+                        <small>Example: <code>/leaderboard</code></small>
+                    </li>
+                    <li>
+                        <code>/profile</code>
+                        <span>Show user profile</span>
+                        <small>Example: <code>/profile @user</code></small>
+                    </li>
+                    <li>
+                        <code>/av</code>
+                        <span>View avatar</span>
+                        <small>Example: <code>/av @user</code></small>
+                    </li>
+                    <li>
+                        <code>/server</code>
+                        <span>Server information</span>
+                        <small>Example: <code>/server</code></small>
+                    </li>
+                </ul>
+            </details>
+
+            <!-- ================= Moderation ================= -->
+            <details class="command-group">
+                <summary>🛡️ Moderation</summary>
+                <ul class="command-list">
+                    <li>
+                        <code>/addrole</code>
+                        <span>Add a role to a member</span>
+                        <small>Example: <code>,addrole @user RoleName</code></small>
+                    </li>
+                </ul>
+            </details>
+
+            <!-- ================= Economy ================= -->
+            <details class="command-group">
+                <summary>💰 Economy</summary>
+                <ul class="command-list">
+                    <li><code>/balance</code><span>Check wallet balance</span><small><code>/balance</code></small></li>
+                    <li><code>/daily</code><span>Claim daily reward</span><small><code>/daily</code></small></li>
+                    <li><code>/give</code><span>Send coins to a user</span><small><code>/give @user 500</code></small>
+                    </li>
+                    <li><code>/gamble</code><span>Double or lose coins</span><small><code>/gamble 100</code></small>
+                    </li>
+                    <li><code>/slot</code><span>Slot machine game</span><small><code>/slot 200</code></small></li>
+                    <li><code>/roulette</code><span>Bet on colors</span><small><code>/roulette 100 red</code></small>
+                    </li>
+                    <li><code>/duel</code><span>Russian roulette duel</span><small><code>/duel @user 500</code></small>
+                    </li>
+                    <li><code>/bank</code><span>Check bank balance</span><small><code>/bank</code></small></li>
+                    <li><code>/deposit</code><span>Deposit coins</span><small><code>/deposit all</code></small></li>
+                    <li><code>/withdraw</code><span>Withdraw coins</span><small><code>/withdraw 500</code></small></li>
+                    <li><code>/steal</code><span>Steal from a user</span><small><code>/steal @user</code></small></li>
+                    <li><code>/richest</code><span>Top richest users</span><small><code>/richest</code></small></li>
+                </ul>
+            </details>
+
+            <!-- ================= Fun ================= -->
+            <details class="command-group">
+                <summary>🎮 Fun</summary>
+                <ul class="command-list">
+                    <li><code>/waifu</code><span>Random waifu image</span></li>
+                    <li><code>/nsfw</code><span>NSFW waifu images</span></li>
+                    <li><code>/hug</code><span>Hug someone</span><small><code>/hug @user</code></small></li>
+                    <li><code>/kiss</code><span>Kiss someone</span></li>
+                    <li><code>/slap</code><span>Slap someone</span></li>
+                    <li><code>/pat</code><span>Pat someone</span></li>
+                    <li><code>/bonk</code><span>Bonk someone</span></li>
+                    <li><code>/8ball</code><span>Magic 8-ball</span><small><code>/8ball Will I win?</code></small></li>
+                    <li><code>/roast</code><span>Roast a user</span></li>
+                    <li><code>/pickup</code><span>Pickup line</span></li>
+                    <li><code>/coin</code><span>Flip a coin</span></li>
+                    <li><code>/roll</code><span>Roll dice</span></li>
+                </ul>
+            </details>
+
+        </div>
+    </main>
+
+
+    <footer>
+        © 2026 Anvi Bot • Built for Discord
+    </footer>
+    
+    <script>
+        const searchInput = document.getElementById("commandSearch");
+        const commandGroups = document.querySelectorAll(".command-group");
+
+        searchInput.addEventListener("input", () => {
+            const query = searchInput.value.toLowerCase();
+
+            commandGroups.forEach(group => {
+                const commands = group.querySelectorAll(".command-list li");
+                let hasMatch = false;
+
+                commands.forEach(cmd => {
+                    const text = cmd.innerText.toLowerCase();
+                    const match = text.includes(query);
+
+                    cmd.style.display = match ? "block" : "none";
+                    if (match) hasMatch = true;
+                });
+
+                // Expand group if matches found
+                group.open = hasMatch && query.length > 0;
+
+                // Hide whole category if no matches
+                group.style.display = hasMatch || query.length === 0 ? "block" : "none";
+            });
+
+            // Reset when search is cleared
+            if (query.length === 0) {
+                commandGroups.forEach(group => {
+                    group.open = false;
+                    group.style.display = "block";
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
