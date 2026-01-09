@@ -148,6 +148,34 @@ p {
   box-shadow: 0 0 40px rgba(88, 101, 242, 0.75);
 }
   
+/* AVATAR WRAPPER */
+.avatar-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+/* ONLINE STATUS DOT */
+.status-dot {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 18px;
+  height: 18px;
+  background: #23a55a; /* Discord online green */
+  border: 4px solid #0e0f1a; /* matches page background */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(35, 165, 90, 0.8);
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 6px rgba(35,165,90,0.6); }
+  50% { box-shadow: 0 0 14px rgba(35,165,90,1); }
+  100% { box-shadow: 0 0 6px rgba(35,165,90,0.6); }
+}
+
+.status-dot {
+  animation: pulse 2.5s infinite;
+}
 
 /* FOOTER */
 footer {
@@ -172,11 +200,15 @@ footer {
 
 <div class="container">
   <div class="bot-avatar">
-  <img
-    src="https://cdn.discordapp.com/avatars/1218813969716875345/a4402857304efa6b539b4fd47cb5e4c6.png?size=512"
-    alt="Anvi Bot Avatar"
-  >
+  <div class="avatar-wrapper">
+    <img
+      src="https://cdn.discordapp.com/avatars/1218813969716875345/a4402857304efa6b539b4fd47cb5e4c6.png?size=256"
+      alt="Anvi Bot Avatar"
+    >
+    <span class="status-dot"></span>
+  </div>
 </div>
+
 
 <h1>Anvi</h1>
 
