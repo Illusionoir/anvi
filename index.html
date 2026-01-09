@@ -126,6 +126,63 @@ p {
   border-color: var(--accent-hover);
 }
 
+/* INFO SECTIONS */
+.info-sections {
+  margin-top: 3.5rem;
+  text-align: left;
+  color: var(--muted);
+}
+
+.info-sections section {
+  margin-bottom: 2.5rem;
+}
+
+.info-sections h2 {
+  color: var(--accent);
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.info-sections p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.info-sections ul {
+  padding-left: 1.2rem;
+  margin: 0.8rem 0;
+}
+
+.info-sections li {
+  margin-bottom: 0.4rem;
+}
+
+.info-sections code {
+  background: #23265a;
+  padding: 0.2rem 0.45rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+/* SEPARATORS */
+.info-sections hr {
+  border: none;
+  border-top: 1px solid #2a2d55;
+  margin: 2.5rem 0;
+}
+  
+.discord-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.discord-link:hover {
+  text-decoration: underline;
+}
+
+  
 /* BOT AVATAR */
 .bot-avatar {
   display: flex;
@@ -175,6 +232,30 @@ p {
 
 .status-dot {
   animation: pulse 2.5s infinite;
+}
+/* SPECIAL THANKS */
+.thanks-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.thanks-list li {
+  margin-bottom: 0.6rem;
+}
+
+.thanks-list a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.thanks-list a:hover {
+  text-decoration: underline;
+}
+.thanks-static {
+  color: var(--muted);
+  font-weight: 600;
 }
 
 /* FOOTER */
@@ -235,6 +316,87 @@ footer {
     <a class="button" href="privacy.html">🔐 Privacy Policy</a>
     <a class="button" href="tos.html">📜 Terms of Service</a>
   </div>
+</div>
+<div class="info-sections">
+
+
+  <section>
+    <h2>🧑‍💻 Developer</h2>
+    <ul>
+      <li><strong>Bot Name:</strong> Anvi</li>
+      <li><strong>Developer:</strong> Illusion</li>
+      <li><strong>Platform:</strong> Discord</li>
+      <li><strong>Language:</strong> Python (discord.py)</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section>
+  <h2>📩 Support</h2>
+  <p>
+    For support, issues, or data removal requests:<br>
+    Contact the developer on Discord:
+    <a
+      href="https://discord.com/users/1082009804874199150"
+      target="_blank"
+      rel="noopener"
+      class="discord-link"
+    >
+      Illusion
+    </a>
+  </p>
+</section>
+
+<hr>
+  
+<section>
+  <h2>💖 Special Thanks</h2>
+  <p>
+    Huge thanks to the following people for their help, support, and inspiration:
+  </p>
+
+ <ul class="thanks-list">
+  <li>
+    <a
+      href="https://discord.com/users/960606025289957486"
+      target="_blank"
+      rel="noopener"
+    >
+      Megatron
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="https://discord.com/users/1224685858708521013"
+      target="_blank"
+      rel="noopener"
+    >
+      Kat🤍
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="https://discord.com/users/1435620547198455979"
+      target="_blank"
+      rel="noopener"
+    >
+      Dreaze
+    </a>
+  </li>
+
+  <li>
+    <span class="thanks-static">Vivi</span>
+  </li>
+
+  <li>
+    <span class="thanks-static">ChatGPT</span>
+  </li>
+</ul>
+
+
 </div>
 
 <footer>
