@@ -126,6 +126,29 @@ p {
   border-color: var(--accent-hover);
 }
 
+/* BOT AVATAR */
+.bot-avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.bot-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid rgba(88, 101, 242, 0.9);
+  box-shadow: 0 0 30px rgba(88, 101, 242, 0.5);
+  background: #0e0f1a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bot-avatar img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(88, 101, 242, 0.75);
+}
+  
+
 /* FOOTER */
 footer {
   text-align: center;
@@ -148,7 +171,15 @@ footer {
 </nav>
 
 <div class="container">
-  <h1>Anvi</h1>
+  <div class="bot-avatar">
+  <img
+    src="https://cdn.discordapp.com/avatars/1218813969716875345/a4402857304efa6b539b4fd47cb5e4c6.png?size=512"
+    alt="Anvi Bot Avatar"
+  >
+</div>
+
+<h1>Anvi</h1>
+
   <p>
     A powerful all-in-one Discord bot built for moderation,
     economy, leveling, and fun.
