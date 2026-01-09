@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anvi – Discord Bot</title>
+
+<style>
+:root {
+  --bg: #0e0f1a;
+  --card: #16182b;
+  --text: #e4e6eb;
+  --muted: #b5bac1;
+  --accent: #5865F2;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top, #1b1f3b, var(--bg));
+  color: var(--text);
+}
+
+nav {
+  background: rgba(22,24,43,0.85);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2a2d55;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.container {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 3rem;
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 25px 70px rgba(0,0,0,.45);
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.3em;
+  color: var(--accent);
+}
+
+p {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.badges {
+  margin-top: 2rem;
+}
+
+.badges span {
+  display: inline-block;
+  margin: 0.4rem;
+  padding: 0.6rem 1rem;
+  background: #23265a;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  margin: 4rem 0 2rem;
+  color: #8b8fae;
+  font-size: 0.85rem;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <strong>Anvi</strong>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="tos.html">ToS</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Anvi</h1>
+  <p>
+    A powerful all-in-one Discord bot built for moderation,
+    economy, leveling, and fun.
+  </p>
+
+  <div class="badges">
+    <span>🛠️ Moderation</span>
+    <span>💰 Economy</span>
+    <span>📊 Leveling</span>
+    <span>🎖️ Badges</span>
+    <span>🎮 Fun</span>
+  </div>
+</div>
+
+<footer>
+  © 2026 Anvi Bot • Built for Discord
+</footer>
+
+</body>
+</html>
