@@ -1,407 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anvi – Discord Bot</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anvi – Discord Bot</title>
 
-<style>
-:root {
-  --bg: #0e0f1a;
-  --card: #16182b;
-  --text: #e4e6eb;
-  --muted: #b5bac1;
-  --accent: #5865F2;
-  --accent-hover: #4752c4;
-}
+  <style>
+    :root {
+      --bg: #0e0f1a;
+      --card: #16182b;
+      --text: #e4e6eb;
+      --muted: #b5bac1;
+      --accent: #5865F2;
+      --accent-hover: #4752c4;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: radial-gradient(circle at top, #1b1f3b, var(--bg));
-  color: var(--text);
-}
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #1b1f3b, var(--bg));
+      color: var(--text);
+    }
 
-/* NAVBAR */
-nav {
-  background: rgba(22,24,43,0.9);
-  backdrop-filter: blur(10px);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #2a2d55;
-}
+    /* NAVBAR */
+    nav {
+      background: rgba(22, 24, 43, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #2a2d55;
+    }
 
-nav strong {
-  font-size: 1.1rem;
-}
+    nav strong {
+      font-size: 1.1rem;
+    }
 
-nav a {
-  color: var(--text);
-  text-decoration: none;
-  margin-left: 1.5rem;
-  font-weight: 500;
-}
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+    }
 
-nav a:hover {
-  color: var(--accent);
-}
+    nav a:hover {
+      color: var(--accent);
+    }
 
-/* MAIN CARD */
-.container {
-  max-width: 900px;
-  margin: 4rem auto;
-  padding: 3.5rem 3rem;
-  background: var(--card);
-  border-radius: 18px;
-  box-shadow: 0 25px 70px rgba(0,0,0,.45);
-  text-align: center;
-}
+    /* MAIN CARD */
+    .container {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 3.5rem 3rem;
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+      text-align: center;
+    }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 0.3em;
-  color: var(--accent);
-}
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.3em;
+      color: var(--accent);
+    }
 
-p {
-  color: var(--muted);
-  font-size: 1.1rem;
-}
+    p {
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
 
-/* FEATURE TAGS */
-.badges {
-  margin: 2rem 0;
-}
+    /* FEATURE TAGS */
+    .badges {
+      margin: 2rem 0;
+    }
 
-.badges span {
-  display: inline-block;
-  margin: 0.4rem;
-  padding: 0.6rem 1rem;
-  background: #23265a;
-  border-radius: 999px;
-  font-size: 0.9rem;
-}
+    .badges span {
+      display: inline-block;
+      margin: 0.4rem;
+      padding: 0.6rem 1rem;
+      background: #23265a;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
 
-/* BUTTONS */
-.buttons {
-  margin-top: 2.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-}
+    /* BUTTONS */
+    .buttons {
+      margin-top: 2.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
 
-.button {
-  padding: 0.9rem 1.8rem;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--accent);
-  background: transparent;
-  border: 2px solid var(--accent);
-  transition: all 0.2s ease;
-}
+    .button {
+      padding: 0.9rem 1.8rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--accent);
+      background: transparent;
+      border: 2px solid var(--accent);
+      transition: all 0.2s ease;
+    }
 
-/* PRIMARY INVITE BUTTON */
-.button.invite {
-  background: var(--accent);
-  color: white;
-  border-color: var(--accent);
-}
+    .button.invite {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
 
-.button:hover {
-  background: var(--accent);
-  color: white;
-  transform: translateY(-2px);
-}
+    .button:hover {
+      background: var(--accent);
+      color: white;
+      transform: translateY(-2px);
+    }
 
-.button.invite:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
-}
+    .button.invite:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
 
-/* INFO SECTIONS */
-.info-sections {
-  margin-top: 3.5rem;
-  text-align: left;
-  color: var(--muted);
-}
+    /* BOT AVATAR */
+    .bot-avatar {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+    }
 
-.info-sections section {
-  margin-bottom: 2.5rem;
-}
+    .avatar-wrapper {
+      position: relative;
+      width: 120px;
+      height: 120px;
+    }
 
-.info-sections h2 {
-  color: var(--accent);
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
-}
+    .bot-avatar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid rgba(88, 101, 242, 0.9);
+      box-shadow: 0 0 30px rgba(88, 101, 242, 0.5);
+      background: #0e0f1a;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.info-sections p {
-  font-size: 1rem;
-  line-height: 1.6;
-}
+    .bot-avatar img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(88, 101, 242, 0.75);
+    }
 
-.info-sections ul {
-  padding-left: 1.2rem;
-  margin: 0.8rem 0;
-}
+    .status-dot {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      width: 18px;
+      height: 18px;
+      background: #23a55a;
+      border: 4px solid #0e0f1a;
+      border-radius: 50%;
+      animation: pulse 2.5s infinite;
+    }
 
-.info-sections li {
-  margin-bottom: 0.4rem;
-}
+    @keyframes pulse {
+      0% { box-shadow: 0 0 6px rgba(35, 165, 90, 0.6); }
+      50% { box-shadow: 0 0 14px rgba(35, 165, 90, 1); }
+      100% { box-shadow: 0 0 6px rgba(35, 165, 90, 0.6); }
+    }
 
-.info-sections code {
-  background: #23265a;
-  padding: 0.2rem 0.45rem;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  color: #fff;
-}
+    /* INFO SECTIONS */
+    .info-sections {
+      margin-top: 3.5rem;
+      text-align: left;
+      color: var(--muted);
+    }
 
-/* SEPARATORS */
-.info-sections hr {
-  border: none;
-  border-top: 1px solid #2a2d55;
-  margin: 2.5rem 0;
-}
-  
-.discord-link {
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-}
+    .info-sections h2 {
+      color: var(--accent);
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
 
-.discord-link:hover {
-  text-decoration: underline;
-}
+    .info-sections hr {
+      border: none;
+      border-top: 1px solid #2a2d55;
+      margin: 2.5rem 0;
+    }
 
-  
-/* BOT AVATAR */
-.bot-avatar {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.2rem;
-}
+    .thanks-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 1rem;
+    }
 
-.bot-avatar img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 3px solid rgba(88, 101, 242, 0.9);
-  box-shadow: 0 0 30px rgba(88, 101, 242, 0.5);
-  background: #0e0f1a;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .thanks-list li {
+      margin-bottom: 0.6rem;
+    }
 
-.bot-avatar img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 40px rgba(88, 101, 242, 0.75);
-}
-  
-/* AVATAR WRAPPER */
-.avatar-wrapper {
-  position: relative;
-  width: 120px;
-  height: 120px;
-}
+    .thanks-list a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
 
-/* ONLINE STATUS DOT */
-.status-dot {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  width: 18px;
-  height: 18px;
-  background: #23a55a; /* Discord online green */
-  border: 4px solid #0e0f1a; /* matches page background */
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(35, 165, 90, 0.8);
-}
-@keyframes pulse {
-  0% { box-shadow: 0 0 6px rgba(35,165,90,0.6); }
-  50% { box-shadow: 0 0 14px rgba(35,165,90,1); }
-  100% { box-shadow: 0 0 6px rgba(35,165,90,0.6); }
-}
+    .thanks-list a:hover {
+      text-decoration: underline;
+    }
 
-.status-dot {
-  animation: pulse 2.5s infinite;
-}
-/* SPECIAL THANKS */
-.thanks-list {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 1rem;
-}
+    .thanks-static {
+      color: var(--muted);
+      font-weight: 600;
+    }
 
-.thanks-list li {
-  margin-bottom: 0.6rem;
-}
+    .discord-link {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
 
-.thanks-list a {
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-}
+    .discord-link:hover {
+      text-decoration: underline;
+    }
 
-.thanks-list a:hover {
-  text-decoration: underline;
-}
-.thanks-static {
-  color: var(--muted);
-  font-weight: 600;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  margin: 4rem 0 2rem;
-  color: #8b8fae;
-  font-size: 0.85rem;
-}
-</style>
+    footer {
+      text-align: center;
+      margin: 4rem 0 2rem;
+      color: #8b8fae;
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <strong>Anvi</strong>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="tos.html">ToS</a>
+  <nav>
+    <strong>Anvi</strong>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="tos.html">ToS</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="bot-avatar">
+      <div class="avatar-wrapper">
+        <img
+          src="https://cdn.discordapp.com/avatars/1218813969716875345/a4402857304efa6b539b4fd47cb5e4c6.png?size=256"
+          alt="Anvi Bot Avatar"
+        >
+        <span class="status-dot"></span>
+      </div>
+    </div>
+
+    <h1>Anvi</h1>
+
+    <p>
+      A powerful all-in-one Discord bot built for moderation,
+      economy, leveling, and fun.
+    </p>
+
+    <div class="badges">
+      <span>🛠️ Moderation</span>
+      <span>💰 Economy</span>
+      <span>📊 Leveling</span>
+      <span>🎖️ Badges</span>
+      <span>🎮 Fun</span>
+    </div>
+
+    <div class="buttons">
+      <a
+        class="button invite"
+        href="https://discord.com/oauth2/authorize?client_id=1218813969716875345"
+        target="_blank"
+        rel="noopener"
+      >
+        ➕ Invite Anvi
+      </a>
+
+      <a class="button" href="privacy.html">🔐 Privacy Policy</a>
+      <a class="button" href="tos.html">📜 Terms of Service</a>
+    </div>
+
+    <div class="info-sections">
+
+      <section>
+        <h2>🧑‍💻 Developer</h2>
+        <ul>
+          <li><strong>Bot Name:</strong> Anvi</li>
+          <li><strong>Developer:</strong> Illusion</li>
+          <li><strong>Platform:</strong> Discord</li>
+          <li><strong>Language:</strong> Python (discord.py)</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>📩 Support</h2>
+        <p>
+          For support, issues, or data removal requests:<br>
+          Contact the developer on Discord:
+          <a
+            href="https://discord.com/users/1082009804874199150"
+            target="_blank"
+            rel="noopener"
+            class="discord-link"
+          >
+            Illusion
+          </a>
+        </p>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>💖 Special Thanks</h2>
+        <p>Huge thanks to the following people for their help, support, and inspiration:</p>
+
+        <ul class="thanks-list">
+          <li><a href="https://discord.com/users/960606025289957486" target="_blank">Megatron</a></li>
+          <li><a href="https://discord.com/users/1224685858708521013" target="_blank">Kat 🤍</a></li>
+          <li><a href="https://discord.com/users/1435620547198455979" target="_blank">Dreaze</a></li>
+          <li><span class="thanks-static">Vivi</span></li>
+          <li><span class="thanks-static">ChatGPT</span></li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>⚠️ Disclaimer</h2>
+        <p>
+          Anvi is provided <strong>as-is</strong> with no guarantee of uptime or data persistence.
+          Features may change at any time.
+        </p>
+      </section>
+
+    </div>
   </div>
-</nav>
 
-<div class="container">
-  <div class="bot-avatar">
-  <div class="avatar-wrapper">
-    <img
-      src="https://cdn.discordapp.com/avatars/1218813969716875345/a4402857304efa6b539b4fd47cb5e4c6.png?size=256"
-      alt="Anvi Bot Avatar"
-    >
-    <span class="status-dot"></span>
-  </div>
-</div>
-
-
-<h1>Anvi</h1>
-
-  <p>
-    A powerful all-in-one Discord bot built for moderation,
-    economy, leveling, and fun.
-  </p>
-
-  <div class="badges">
-    <span>🛠️ Moderation</span>
-    <span>💰 Economy</span>
-    <span>📊 Leveling</span>
-    <span>🎖️ Badges</span>
-    <span>🎮 Fun</span>
-  </div>
-
-  <div class="buttons">
-    <a class="button invite"
-       href="https://discord.com/oauth2/authorize?client_id=1218813969716875345"
-       target="_blank" rel="noopener">
-       ➕ Invite Anvi
-    </a>
-
-    <a class="button" href="privacy.html">🔐 Privacy Policy</a>
-    <a class="button" href="tos.html">📜 Terms of Service</a>
-  </div>
-</div>
-<div class="info-sections">
-
-
-  <section>
-    <h2>🧑‍💻 Developer</h2>
-    <ul>
-      <li><strong>Bot Name:</strong> Anvi</li>
-      <li><strong>Developer:</strong> Illusion</li>
-      <li><strong>Platform:</strong> Discord</li>
-      <li><strong>Language:</strong> Python (discord.py)</li>
-    </ul>
-  </section>
-
-  <hr>
-
-  <section>
-  <h2>📩 Support</h2>
-  <p>
-    For support, issues, or data removal requests:<br>
-    Contact the developer on Discord:
-    <a
-      href="https://discord.com/users/1082009804874199150"
-      target="_blank"
-      rel="noopener"
-      class="discord-link"
-    >
-      Illusion
-    </a>
-  </p>
-</section>
-
-<hr>
-  
-<section>
-  <h2>💖 Special Thanks</h2>
-  <p>
-    Huge thanks to the following people for their help, support, and inspiration:
-  </p>
-
- <ul class="thanks-list">
-  <li>
-    <a
-      href="https://discord.com/users/960606025289957486"
-      target="_blank"
-      rel="noopener"
-    >
-      Megatron
-    </a>
-  </li>
-
-  <li>
-    <a
-      href="https://discord.com/users/1224685858708521013"
-      target="_blank"
-      rel="noopener"
-    >
-      Kat🤍
-    </a>
-  </li>
-
-  <li>
-    <a
-      href="https://discord.com/users/1435620547198455979"
-      target="_blank"
-      rel="noopener"
-    >
-      Dreaze
-    </a>
-  </li>
-
-  <li>
-    <span class="thanks-static">Vivi</span>
-  </li>
-
-  <li>
-    <span class="thanks-static">ChatGPT</span>
-  </li>
-</ul>
-
-
-</div>
-
-<footer>
-  © 2026 Anvi Bot • Built for Discord
-</footer>
+  <footer>
+    © 2026 Anvi Bot • Built for Discord
+  </footer>
 
 </body>
 </html>
