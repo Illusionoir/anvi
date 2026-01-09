@@ -27,10 +27,10 @@ Anvi stores limited data required for functionality:
 No data is sold or shared with third parties.
 
 📜 **Privacy Policy:**  
-https://YOUR_USERNAME.github.io/anvi/privacy.html
+https://illusionoir.github.io/anvi/privacy.html
 
 📜 **Terms of Service:**  
-https://YOUR_USERNAME.github.io/anvi/tos.html
+https://illusionoir.github.io/anvi/tos.html
 
 ---
 
