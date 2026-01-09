@@ -233,6 +233,72 @@ h1 {
 }
 
 
+/* COMMAND LIST */
+.command-group {
+  margin-bottom: 1.5rem;
+  border: 1px solid #2a2d55;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  background: rgba(22,24,43,0.6);
+}
+
+.command-group summary {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  list-style: none;
+}
+
+.command-group[open] summary {
+  margin-bottom: 0.6rem;
+}
+
+.command-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.command-list li {
+  margin-bottom: 0.7rem;
+}
+
+.command-list span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.command-list small {
+  display: block;
+  font-size: 0.85rem;
+  color: #8b8fae;
+}
+
+/* COMMAND SEARCH */
+.command-search {
+  margin: 1.5rem 0 2rem;
+}
+
+.command-search input {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid #2a2d55;
+  background: #1c1f3a;
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+}
+
+.command-search input::placeholder {
+  color: var(--muted);
+}
+
+.command-search input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.3);
+}
 
 
 /* FOOTER */
