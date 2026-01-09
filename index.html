@@ -12,6 +12,7 @@
   --text: #e4e6eb;
   --muted: #b5bac1;
   --accent: #5865F2;
+  --accent-hover: #4752c4;
 }
 
 * { box-sizing: border-box; }
@@ -47,7 +48,7 @@ nav a:hover {
 .container {
   max-width: 900px;
   margin: 4rem auto;
-  padding: 3rem;
+  padding: 3.5rem 3rem;
   background: var(--card);
   border-radius: 18px;
   box-shadow: 0 25px 70px rgba(0,0,0,.45);
@@ -66,7 +67,7 @@ p {
 }
 
 .badges {
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
 .badges span {
@@ -76,6 +77,39 @@ p {
   background: #23265a;
   border-radius: 999px;
   font-size: 0.9rem;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 0.9rem 1.8rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  background: var(--accent);
+  transition: all 0.2s ease;
+}
+
+.button.secondary {
+  background: transparent;
+  border: 2px solid var(--accent);
+}
+
+.button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.button.secondary:hover {
+  background: var(--accent);
 }
 
 footer {
@@ -110,6 +144,12 @@ footer {
     <span>📊 Leveling</span>
     <span>🎖️ Badges</span>
     <span>🎮 Fun</span>
+  </div>
+
+  <!-- BUTTONS -->
+  <div class="buttons">
+    <a class="button" href="privacy.html">🔐 Privacy Policy</a>
+    <a class="button secondary" href="tos.html">📜 Terms of Service</a>
   </div>
 </div>
 
